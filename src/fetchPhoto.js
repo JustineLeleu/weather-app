@@ -7,6 +7,9 @@ export function fetchPhoto(element, city)
     const unsplash = createApi({
         accessKey: import.meta.env.VITE_PHOTO_API_KEY,
     });
+
+    document.getElementById("loaderPhoto").classList.add("lds-dual-ring");
+    element.classList.add("hidden");
       
     unsplash.search.getPhotos({
         query: city,
@@ -21,6 +24,8 @@ export function fetchPhoto(element, city)
         const photo = result.response;
         console.log(photo.results[0].links.download);
         element.setAttribute("src", photo.results[0].links.download);
+        element.classList.remove("hidden");
+        document.getElementById("loaderPhoto").classList.remove("lds-dual-ring");
         }
     });
 }

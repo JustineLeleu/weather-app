@@ -15,6 +15,7 @@ document.querySelector('#mainCard').innerHTML = `
     </div>
     <img id="icon" class="object-contain w-20 md:w-40 lg:w-60" src="/images/icon-clear.png" alt="sun--v1"/>
     <img id="cityPhoto" class="object-contain w-20 md:w-40 lg:w-60" src="https://img.icons8.com/clouds/100/city-buildings.png" alt="city picture">
+    <div id="loaderPhoto" class=""></div>
   </div>
 `
 
